@@ -1,7 +1,9 @@
 import React from 'react'
+import { useContext } from 'react'
 import { AiFillPlayCircle } from 'react-icons/ai'
 import { SiEthereum } from 'react-icons/si'
 import { BsInfoCircle } from 'react-icons/bs'
+import { TransactionContext } from '../context/TransactionContext'
 
 import { Loader } from './'
 
@@ -20,9 +22,7 @@ const Input =({placeholder, name, type, value, handleChange}) => (
 
 const Welcome = () => {
 
-  const connectWallet = () => {
-
-  }
+  const {connectWallet} = useContext(TransactionContext)
 
   const handleSubmit = () => {
 
@@ -96,7 +96,7 @@ const Welcome = () => {
 
             <div className='h-[1px] w-full bg-gray-400 my-2' />
 
-            {true?(
+            {false?(
               <Loader />
             ):(
               <button
