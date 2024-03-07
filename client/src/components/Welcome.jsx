@@ -96,6 +96,7 @@ const Welcome = () => {
           </div>
 
           <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
+            {/* handleChange function updates the inputs dynamically depending on the name of the specific input, so its important that the name exactly match the what we have in the state */}
             <Input placeholder="Address To" name="addressTo" type="text" handleChange={handleChange} />
             <Input placeholder="Amount (ETH)" name="amount" type="number" handleChange={handleChange} />
             <Input placeholder="Keyword (GIF)" name="keyword" type="text" handleChange={handleChange} />
